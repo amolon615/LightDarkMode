@@ -155,38 +155,6 @@ struct ContentView: View {
 }
 
 
-
-
-struct NewView: View {
-    
-    @State var nightMode: Bool = false
-    
-    var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-            ZStack {
-                RoundedRectangle(cornerRadius: 100)
-                    .fill(LinearGradient(gradient: Gradient(colors: [backgroundNightColorDark, backgroundNightColorLight]), startPoint: .leading, endPoint: .trailing))
-                    .frame(width: 350, height: 150)
-                  
-         
-                
-                HStack {
-                    Circle()
-                        
-                        .frame(width: 130, height: 130)
-                        .position(x: 270, y: 75)
-                }
-
-                
-            }
-            .frame(width: 350, height: 150)
-            .mask(  RoundedRectangle(cornerRadius: 100)
-            .frame(width: 350, height: 150))
-        }
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
